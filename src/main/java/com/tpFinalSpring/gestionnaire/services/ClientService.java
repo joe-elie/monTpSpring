@@ -5,11 +5,12 @@ import com.tpFinalSpring.gestionnaire.exceptions.ClientIntrouvableException;
 import com.tpFinalSpring.gestionnaire.modeles.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Service
 public class ClientService {
 
     @Autowired

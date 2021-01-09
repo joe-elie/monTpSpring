@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+<thead>
+<tr>
+    <th>Prenom</th>
+    <th>Nom</th>
+    <th>Email</th>
+</tr>
+</thead>
+    <tbody>
+    <tr th:each="client:${clients}">
+        <td th:text="${client.getPrenomClient()}"></td>
+        <td th:text="${client.getNomClient()}"></td>
+        <td th:text="${client.getCourrielClient()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
