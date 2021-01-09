@@ -1,6 +1,6 @@
 package com.tpFinalSpring.gestionnaire.services;
 
-import com.tpFinalSpring.gestionnaire.dao.DAOClient;
+import com.tpFinalSpring.gestionnaire.repositories.ClientRepository;
 import com.tpFinalSpring.gestionnaire.exceptions.ClientIntrouvableException;
 import com.tpFinalSpring.gestionnaire.modeles.Client;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,18 +13,18 @@ import java.util.Optional;
 public class ServiceClient {
 
     @Autowired
-    private DAOClient daoClient;
+    private ClientRepository clientRepository;
 
     public Client addClient(Client client){
-        return daoClient.save(client);
+        return clientRepository.save(client);
     }
 
     public List<Client> getClients(){
-        return daoClient.findAll();
+        return clientRepository.findAll();
     }
 
     public Client getClient(int id){
-        Optional<Client> clientOptionel = daoClient.findById(id);
+        Optional<Client> clientOptionel = clientRepository.findById(id);
         if(!clientOptionel.isPresent())
         {
             throw new ClientIntrouvableException("Aucun client avec cette ID, désolé !!");
@@ -34,11 +34,11 @@ public class ServiceClient {
 
     public Client updateClient(int id, Client client){
         client.setIdClient(id);
-        return daoClient.save(client);
+        return clientRepository.save(client);
     }
 
     public void deleteClient (int id){
-        daoClient.deleteById(id);
+        clientRepository.deleteById(id);
 
     }
 }

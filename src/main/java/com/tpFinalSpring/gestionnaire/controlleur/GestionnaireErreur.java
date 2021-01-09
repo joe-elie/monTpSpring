@@ -1,4 +1,4 @@
-package com.tpFinalSpring.gestionnaire.api;
+package com.tpFinalSpring.gestionnaire.controlleur;
 
 import com.tpFinalSpring.gestionnaire.exceptions.ClientIntrouvableException;
 import com.tpFinalSpring.gestionnaire.exceptions.GestionnaireErreurException;

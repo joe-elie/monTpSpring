@@ -1,4 +1,4 @@
-package com.tpFinalSpring.gestionnaire.api;
+package com.tpFinalSpring.gestionnaire.controlleur;
 
 import com.tpFinalSpring.gestionnaire.modeles.Client;
 import com.tpFinalSpring.gestionnaire.services.ServiceClient;
