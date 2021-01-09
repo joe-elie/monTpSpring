@@ -1,4 +1,4 @@
-package com.tpFinalSpring.gestionnaire.controlleur;
+package com.tpFinalSpring.gestionnaire.controller;
 
 import com.tpFinalSpring.gestionnaire.exceptions.ClientIntrouvableException;
 import com.tpFinalSpring.gestionnaire.exceptions.GestionnaireErreurException;
@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 @ControllerAdvice
 @RestController
-public class GestionnaireErreur extends ResponseEntityExceptionHandler {
+public class ErreurController extends ResponseEntityExceptionHandler {
 
     @Value("${api_doc_url}")
     private String details;

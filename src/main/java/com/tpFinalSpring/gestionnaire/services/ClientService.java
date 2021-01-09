@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
-public class ServiceClient {
+public class ClientService {
 
     @Autowired
     private ClientRepository clientRepository;
